@@ -52,6 +52,10 @@
 |me.ca.dc.rb.rpn2b(参数不确定)|  ta(no gtnoise)   |52.8|5|3w,6w |SVR | FHD | PSA[64,128]  |ca,rb,dc| AP_CYC在训| AP_PED在训| CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/me.people/me.people.fhd.same.asAll.rpn2b.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/me.people/ca.dc.rb.rpn2b --resume=True
 |
 |me.dc|  ta  |52.8|5|3w,6w |SVR | FHD | RPNV2[64, 128]  |N| AP_CYC在训| AP_PED在训| 训练命令|
+|taAug/matchT.nms.peoplefhd|  ta  |52.8|5|3w,6w |SVR | FHD  | RPNV2[64, 128]  |N|  AP_CYC在训| AP_PED在训| CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/people.fhd.taAug/ta.aug.matchT.nms.peoplefhd.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/people/taAug/matchT.nms.peoplefhd --resume True
+|
+|taAug/matchT.nms.ta| ta  |52.8|5|3w,6w |SVR | FHD  | RPNV2[64, 128]  |N| AP_CYC在训| AP_PED在训| CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/people.fhd.taAug/ta.aug.matchT.nms.ta.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/people/taAug/matchT.nms.ta --resume True|
+
 
 
 # all已训模型汇总
