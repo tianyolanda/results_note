@@ -39,7 +39,6 @@ Frame per second (FPS) = 29 fps
 
 bs=4, 80epo, onecyclelr,9161MiB
 
-
 注意，這個channel數要改成256（原來是num_filters[0]，num_filters[0]）
  
         self.concat_conv1 = nn.Conv2d(256, 256, kernel_size=3, padding=1)
