@@ -63,6 +63,7 @@
 |(COMP2)all.fhd.datap|  ta  |52.8|5| 3w,6w |SVR | FHD | RPNV2[64, 128]  |N| 82.81, 68.19, 63.15| 65.41, 59.40, 52.77|  88.91, 78.32, 76.43|51.97, 35.43, 32.16|34|CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ogailab/code/tiatia/dc2.second.psa/second/configs/me.all/all.fhd.datap.config --model_dir /home/ogailab/code/tiatia/feifei-models/dc2/all.fhd.datap/baseline --resume=True|
 |[在训 COMP1]all/taAug/ca.dc.rb.rpn2b|  ta  |52.8|5| 3w,6w |SVR | FHD | PSA[64,128]  |ca,rb,dc|  AP_CYC| AP_PED|  AP_CAR|AP_VAN |fps|python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/taAug/all.fhd.ta.me.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/all/taAug/ca.dc.rb.rpn2b --resume=True|
 |[4/20/2021在训 COMP0.g0]all.fhd.taAug.ca.rb.dc.rpn1b|  ta  |52.8|5| 3w,6w |SVR | FHD | PSA[128]  |ca.rb.dc|  AP_CYC| AP_PED|  AP_CAR|AP_VAN |fps|训练命令|
+|[4/20/2021在训 COMP2]all/taAug/ca.rb.dc|  ta  |52.8|5| 3w,6w |SVR | FHD | PSA[128]  |ca.rb.dc|  AP_CYC| AP_PED|  AP_CAR|AP_VAN |fps|CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ogailab/code/tiatia/dc2.second.psa/second/configs/me.all/all.fhd.taAug.me.config --model_dir /home/ogailab/code/tiatia/feifei-models/dc2/all/taAug/ca.rb.dc --resume=True|
 
 注:[4/20/2021 在训 COMP0.g1 是second.tanet.psa的psa,用taAug,lr=3,再训练一次]
 
