@@ -48,14 +48,11 @@
 |sameAll.noise0.2|  ta  |52.8|5|3w,6w |SVR | FHD | RPNV2[64, 128]  |N| 83.09, 63.78, 61.91| 66.35, 59.77, 53.66| CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ogailab/code/tiatia/dc2.second.psa/second/configs/me.people/people.fhd.same.asAll.gtnoise0.2.config --model_dir /home/ogailab/code/tiatia/feifei-models/dc2/people.fhd.sameAll/noise0.2 --resume=True|
 |fhd.gtnoise0.2(同上)|  ta  |52.8|5|3w,6w |SVR | FHD | RPNV2[64, 128]  |N| 86.02, 71.25, 69.17| 66.30, 59.91, 52.95| CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/people.fhd.same.asAll.gtnoise0.2.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/people/fhd.gtnoise0.2 --resume True|
 |same.asAll.SPMFHD.rpn1b.SVR|  ta  |52.8|5|3w,6w |SVR | FHD | RPNV2[128]  |N| 80.02, 61.57, 59.61| 64.64, 58.02, 52.10| CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/people.fhd.same.asAll.SPMFHD.rpn1b.SVR.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/people/fhd.same.asAll.SPMFHD.rpn1b.SVR --resume True|
-|me.ca.dc.rb|  ta(no gtnoise)   |52.8|5|3w,6w |SVR | FHD | PSA[128]  |ca,rb,dc| 78.08, 59.28, 53.59| 59.30, 55.51, 50.20| CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/me.people/me.people.fhd.same.asAll.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/me.people/ca.dc.rb.rpn1 --resume=True|
-|me.ca.dc.rb.rpn2b(参数不确定)|  ta(no gtnoise)   |52.8|5|3w,6w |SVR | FHD | PSA[64,128]  |ca,rb,dc| AP_CYC在训| AP_PED在训COMP1| CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/me.people/me.people.fhd.same.asAll.rpn2b.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/me.people/ca.dc.rb.rpn2b --resume=True
-|
-|me.dc|  ta  |52.8|5|3w,6w |SVR | FHD | RPNV2[64, 128]  |N| 82.18, 66.39, 61.08| 67.41, 61.14, 54.31| 训练命令|
-|taAug/matchT.nms.peoplefhd|  ta  |52.8|5|3w,6w |SVR | FHD  | RPNV2[64, 128] |dc|  80.70, 62.33, 61.12| 55.05, 49.57, 47.59| CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/people.fhd.taAug/ta.aug.matchT.nms.peoplefhd.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/people/taAug/matchT.nms.peoplefhd --resume True
-|
+|(COMP1)me.ca.dc.rb|  ta(no gtnoise)   |52.8|5|3w,6w |SVR | FHD | PSA[128]  |ca,rb,dc| 78.72, 60.48, 57.91(rb前的結果)| 66.58, 60.36, 56.72(rb前的結果)| CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/me.people/me.people.fhd.same.asAll.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/me.people/ca.dc.rb.rpn1 --resume=True|
+|(COMP1)me.ca.dc.rb.rpn2b|  ta(no gtnoise)   |52.8|5|3w,6w |SVR | FHD | PSA[64,128]  |ca,rb,dc|77.91, 60.23, 58.38(rb後的結果，rpn前也差不多)| 64.32, 58.21, 51.90(rb後的結果，rpn前也差不多)| CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/me.people/me.people.fhd.same.asAll.rpn2b.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/me.people/ca.dc.rb.rpn2b --resume=True|
+|(COMP2)me.dc|  ta  |52.8|5|3w,6w |SVR | FHD | RPNV2[64, 128]  |N| 82.18, 66.39, 61.08| 67.41, 61.14, 54.31| 训练命令|
+|taAug/matchT.nms.peoplefhd|  ta  |52.8|5|3w,6w |SVR | FHD  | RPNV2[64, 128] |dc|  80.70, 62.33, 61.12| 55.05, 49.57, 47.59| CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/people.fhd.taAug/ta.aug.matchT.nms.peoplefhd.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/people/taAug/matchT.nms.peoplefhd --resume True|
 |taAug/matchT.nms.ta| ta  |52.8|5|3w,6w |SVR | FHD  | RPNV2[64, 128]  |N| 78.84, 61.04, 57.78| 57.77, 53.08, 48.36| CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/people.fhd.taAug/ta.aug.matchT.nms.ta.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/people/taAug/matchT.nms.ta --resume True|
-
 
 
 # all已训模型汇总
@@ -63,8 +60,8 @@
 |模型名字|  DAug  |pclR|p/V|max voxel |VFE | MFE | RPN  |w/o ME| AP_CYC| AP_PED|  AP_CAR|AP_VAN |fps|训练命令|
 |---|  ----  | ----  |----  |----|----|---- |---- |---- |---- |---- |---- |---- |---- |---- |
 |baseline fhd|  sa  |52.8|5| 3w,6w |SVR | FHD | RPNV2[64, 128]  |N| 77.94, 60.61, 58.53| 59.90, 52.76, 49.93|88.28, 77.87, 76.05 |50.13, 37.80, 32.29|没测| CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/all.fhd.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/all/fhd --resume True|
-|all.fhd.datap|  ta  |52.8|5| 3w,6w |SVR | FHD | RPNV2[64, 128]  |N| 82.81, 68.19, 63.15| 65.41, 59.40, 52.77|  88.91, 78.32, 76.43|51.97, 35.43, 32.16|34|CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ogailab/code/tiatia/dc2.second.psa/second/configs/me.all/all.fhd.datap.config --model_dir /home/ogailab/code/tiatia/feifei-models/dc2/all.fhd.datap/baseline --resume=True|
-|[待训 COMP1]all.fhd.taAug.ca.rb.dc.rpn2b|  ta  |52.8|5| 3w,6w |SVR | FHD | RPNV2[64,128]  |N|  AP_CYC| AP_PED|  AP_CAR|AP_VAN |fps|训练命令|
+|(COMP2)all.fhd.datap|  ta  |52.8|5| 3w,6w |SVR | FHD | RPNV2[64, 128]  |N| 82.81, 68.19, 63.15| 65.41, 59.40, 52.77|  88.91, 78.32, 76.43|51.97, 35.43, 32.16|34|CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ogailab/code/tiatia/dc2.second.psa/second/configs/me.all/all.fhd.datap.config --model_dir /home/ogailab/code/tiatia/feifei-models/dc2/all.fhd.datap/baseline --resume=True|
+|[在训 COMP1]all/taAug/ca.dc.rb.rpn2b|  ta  |52.8|5| 3w,6w |SVR | FHD | PSA[64,128]  |ca,dc,rb|  AP_CYC| AP_PED|  AP_CAR|AP_VAN |fps|python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/taAug/all.fhd.ta.me.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/all/taAug/ca.dc.rb.rpn2b --resume=True|
 |[待训 COMP1]all.fhd.taAug.ca.rb.dc.rpn1b|  ta  |52.8|5| 3w,6w |SVR | FHD | RPNV2[128]  |N|  AP_CYC| AP_PED|  AP_CAR|AP_VAN |fps|训练命令|
 
 # car(单class)已训模型汇总
@@ -84,11 +81,11 @@
 |---|  ----  |----|----|----|----|----|
 |single_class_ped/taAug/fhd|  ta  |RPNV2[64, 128] |N(baseline)|60.67, 57.31, 51.42 |fps|CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/single_class_ped/ped.taAug.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/single_class_ped/taAug/fhd --resume True|
 |[在训 COMP0.g1]single_class_ped/taAug/fhd.rpn1b|  ta  | RPNV2[128] |N|AP_PED |fps|CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/single_class_ped/ped.taAug.rpn1b.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/single_class_ped/taAug/fhd.rpn1b --resume True |
-|[在训 COMP0.g0]single_class_ped/taAug/fhd.rpn1b.rb|  ta  | RPNV2[128] |rb|AP_PED |fps|CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/dc.second/dc2.second.psa/second/configs/single_class_ped/ped.taAug.rpn1b.rb.config --model_dir /home/ubuntu/codes/3d/dc.second/dc2.second.psa/models/single_class_ped/taAug/fhd.rpn1b.rb --resume=True|
+|[在训 COMP0.g0]single_class_ped/taAug/fhd.rpn1b.rb|  ta  | PSA[128] |rb|AP_PED |fps|CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/dc.second/dc2.second.psa/second/configs/single_class_ped/ped.taAug.rpn1b.rb.config --model_dir /home/ubuntu/codes/3d/dc.second/dc2.second.psa/models/single_class_ped/taAug/fhd.rpn1b.rb --resume=True|
+|(COMP1)me.single_class_ped/taAug/ca.dc.rb.rpn1b|  ta  | PSA[128] |ca,rb,dc|62.61, 56.59, 50.83 |30|CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/taAug/me.single_class_ped.fhd.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/me.single_class_ped/taAug/ca.dc.rb.rpn1b --resume=True|
 
 
 # cyc(单class)已训模型汇总
-
 
 |模型名字|  DAug  | MFE |w/o ME|AP_CYC |fps|训练命令|
 |---|  ----  |----|----|----|----|----|
