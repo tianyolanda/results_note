@@ -103,8 +103,8 @@
 |模型名字|  DAug  | MFE |w/o ME|AP_CYC |fps|训练命令|
 |---|  ----  |----|----|----|----|----|
 |single_class_cyc/taAug/fhd|  ta  |RPNV2[64, 128] |N(baseline)|80.89, 61.53, 58.28(最高的) |fps|CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/single_class_cyc/cyc.taAug.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/single_class_cyc/taAug/fhd --resume True|
-|[待训 COMP0]single_class_cyc/taAug/fhd.rpn1b|  ta  | RPNV2[128] |N|AP_CYC |fps|训练命令 |
-|[待训 COMP0]single_class_cyc/taAug/fhd.rpn1b.rb|  ta  | PSA[128] |rb|AP_CYC |fps|训练命令 |
+|[待训 COMP0 4/21晚]single_class_cyc/taAug/fhd.rpn1b|  ta  | RPNV2[128] |N|AP_CYC |fps|训练命令 |
+|[待训 COMP0 4/21晚]single_class_cyc/taAug/fhd.rpn1b.rb|  ta  | PSA[128] |rb|AP_CYC |fps|训练命令 |
 |[在训 COMP1]me.single_class_cyc/taAug/ca.dc.rb.rpn1b|  ta  | PSA[128] |ca,rb,dc|AP_CYC |fps|python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/single_class_cyc/single_class_cyc.fhd.taAug.me.rpn1b.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/me.single_class_cyc/taAug/ca.dc.rb.rpn1b --resume=True|
  |可以试试 matchT.nms.peoplefhd参数|  DAug  | MFE |w/o ME|AP_CYC |fps|训练命令|
 
