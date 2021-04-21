@@ -64,6 +64,7 @@
 |[在训 COMP1]all/taAug/ca.dc.rb.rpn2b|  ta  |52.8|5| 3w,6w |SVR | FHD | PSA[64,128]  |ca,rb,dc|  AP_CYC| AP_PED|  AP_CAR|AP_VAN |fps|python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/taAug/all.fhd.ta.me.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/all/taAug/ca.dc.rb.rpn2b --resume=True|
 |[4/20/2021在训 COMP0.g0]all.fhd.taAug.ca.rb.dc.rpn1b|  ta  |52.8|5| 3w,6w |SVR | FHD | PSA[128]  |ca.rb.dc|  AP_CYC| AP_PED|  AP_CAR|AP_VAN |fps|训练命令|
 
+
 注:[4/20/2021 在训 COMP0.g1 是second.tanet.psa的psa,用taAug,lr=3,再训练一次]
 
 # car(单class)已训模型汇总
@@ -77,6 +78,11 @@
 |car.lite.ca.taAug|  ta  |ca| 87.58, 77.63, 76.29 |67|CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/dc.second/dc2.second.psa/second/configs/taAug/psa.car.lite.taAug.ca.dc.config --model_dir /home/ubuntu/codes/3d/dc.second/dc2.second.psa/models/car/taAug/lite.ca.taAug --resume=True|
 |[待训 COMP0]car.lite.ca.dc.taAug|  ta  |ca,dc|AP_CAR |fps|训练命令|
 |[*待训 COMP0]car.lite.各种(ca,rb,dc)排列组合.taAug|  ta  |各种(ca,rb,dc)排列组合|AP_CAR |fps|训练命令|
+|----验证refinement brench的补充实验----|  --------  |--------|------- |-------|-------|
+|ta.psa.again4.taAug|  ta  |N(有TA的PSA)|87.43, 77.93, 76.08 |45|    train(config_path='/home/ubuntu/codes/3d/tt.second/second.tanet.psa/second/configs/taAug/psa.car.lite.config',model_dir='/home/ubuntu/codes/3d/tt.second/second.tanet.psa/newmodels/ta.psa.again4.taAug',resume=True)|
+|[在训 COMP0.g1]model_car.lite.voxelRPN.again3.taAug|  ta  |N(有VoxelRPN的rpn)|AP_CAR |fps|train(config_path='/home/ubuntu/codes/3d/second.pytorch/second/configs/taAug/car.lite.voxelRPN.config',model_dir='/home/ubuntu/codes/3d/second.pytorch/newmodels/new323/model_car.lite.voxelRPN.again3.taAug',resume=True)|
+|[待训 COMP0.g0]models-taAug/people/fhd.tapsa|  ta  |N(有TA的PSA)|AP_CAR |fps|CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/tt.second/second.tanet.psa/second/configs/taAug/people.fhd.config --model_dir /home/ubuntu/codes/3d/tt.second/second.tanet.psa/models-taAug/people/fhd.tapsa --resume True|
+
 
 # ped(单class)已训模型汇总
 
