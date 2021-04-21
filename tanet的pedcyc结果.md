@@ -37,6 +37,10 @@ aos  AP:52.15, 50.10, 47.10
 
 
 ---我测的 (论文里用的这个)
+TANet.pp
+速度 15.91/s
+avg forward time per example: 0.009
+avg postprocess time per example: 0.014
 
 Evaluation official
 Car AP(Average Precision)@0.70, 0.70, 0.70:
