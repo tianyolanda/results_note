@@ -8,7 +8,7 @@
 |tanet.ca.rb |  ta  |[64,128,256]+ta.rb |N|AP_CYC |AP_PED|fps|训练命令,已写在second.tanet.psa的train.sh里|
 |me.rb         |  ta  |PSA[128]  |rb|AP_CYC |AP_PED|fps|训练命令|
 |me.ca.dc      |  ta  |PSA[128]  |ca,dc|AP_CYC |AP_PED|fps|训练命令|
-|me.ca.dc.rb   |  ta  |PSA[128]  |ca,dc,rb|AP_CYC |AP_PED|fps|训练命令|
+|me.ca.dc.rb   |  ta  |PSA[128]  |ca,dc,rb|AP_CYC |AP_PED|fps|训练命令,已写在comp1的train.sh备选里|
 
 
 
