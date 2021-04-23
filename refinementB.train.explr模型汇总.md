@@ -8,7 +8,7 @@
 |tanet.ca.rb |  ta  |[64,128,256]+ta.rb |N|AP_CYC |AP_PED|fps|训练命令,已写在second.tanet.psa的train.sh里|
 |[4/22 晚 comp2在训] me.rb         |  ta  |PSA[128]  |rb|AP_CYC |AP_PED|fps|CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ogailab/code/tiatia/dc2.second.psa/second/configs/me.people/people.fhd.taAug.me.explr.config --model_dir /home/ogailab/code/tiatia/feifei-models/dc2/people.explr/me.rb --resume=True|
 |me.ca.dc      |  ta  |PSA[128]  |ca,dc|AP_CYC |AP_PED|fps|训练命令|
-|me.ca.dc.rb   |  ta  |PSA[128]  |ca,dc,rb|AP_CYC |AP_PED|fps|训练命令,已写在comp1的train.sh备选里|
+|[4/22 晚 comp1在训] me.ca.dc.rb   |  ta  |PSA[128]  |ca,dc,rb|AP_CYC |AP_PED|fps|python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/me.people/me.people.fhd.explr.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/me.people/explr/ca.dc.rb.rpn1b --resume=True|
 
 
 

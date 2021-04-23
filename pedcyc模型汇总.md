@@ -53,7 +53,7 @@
 |(COMP2)me.dc|  ta  |52.8|5|3w,6w |SVR | FHD | RPNV2[64, 128]  |N| 82.18, 66.39, 61.08| 67.41, 61.14, 54.31| 训练命令|
 |taAug/matchT.nms.peoplefhd|  ta  |52.8|5|3w,6w |SVR | FHD  | RPNV2[64, 128] |dc|  80.70, 62.33, 61.12| 55.05, 49.57, 47.59| CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/people.fhd.taAug/ta.aug.matchT.nms.peoplefhd.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/people/taAug/matchT.nms.peoplefhd --resume True|
 |taAug/matchT.nms.ta| ta  |52.8|5|3w,6w |SVR | FHD  | RPNV2[64, 128]  |N| 78.84, 61.04, 57.78| 57.77, 53.08, 48.36| CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/people.fhd.taAug/ta.aug.matchT.nms.ta.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/people/taAug/matchT.nms.ta --resume True|
-|[4/22/2021在训 COMP1]me.people/taAug/ca.dc.rpn1b|  ta  |52.8|5|3w,6w |SVR | FHD  | PSA[ 128]  |ca,dc| AP_CYC| AP_PED| python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/taAug/me.people.fhd.ca.dc.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/me.people/taAug/ca.dc.rpn1b --resume=True|
+|[4/22/2021在训 COMP1]me.people/taAug/ca.dc.rpn1b|  ta  |52.8|5|3w,6w |SVR | FHD  | PSA[ 128]  |ca,dc| 81.38, 65.43, 60.07(最高)| 67.39, 60.57, 53.84 (最高) & 64.65, 57.99, 52.05(对应cyc的)| python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/taAug/me.people.fhd.ca.dc.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/me.people/taAug/ca.dc.rpn1b --resume=True|
 
 
 # all已训模型汇总
