@@ -2,7 +2,7 @@
 
 |模型名字|  DAug  |RPN| w/o ME|AP_CYC |AP_PED|fps|训练命令|
 |--- |---|----|----|----|----|----|----|
-|[ 4/22 晚 在训 COMP0.g1] baseline.rpn1b|  ta  |RPNV2[64,128] |N|AP_CYC |AP_PED|fps|CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/1.explr.taAug/people.fhd.rpn1b.config --model_dir /home/ubuntu/codes/3d/models/rb.explr/people/baseline.rpn1b --resume True|
+|[ 4/22 晚 在训 COMP0.g1] baseline.rpn1b|  ta  |RPNV2[64,128] |N|80.06, 59.98, 54.99 |64.91, 58.55, 52.33|33|CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/1.explr.taAug/people.fhd.rpn1b.config --model_dir /home/ubuntu/codes/3d/models/rb.explr/people/baseline.rpn1b --resume True|
 |baseline.rpn2b|  ta  |RPNV2[128] |N|AP_CYC |AP_PED|fps|训练命令,已写在second.baseline2的train.sh备里|
 |tanet.ca      |  ta  |[64,128,256] | N|AP_CYC |AP_PED|fps|训练命令,已写在second.tarpn.norb的train.sh备选里|
 |[ 4/22晚 在训 COMP0.g0] tanet.ca.rb |  ta  |[64,128,256]+ta.rb |N|AP_CYC |AP_PED|fps|CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/tt.second/second.tanet.psa/second/configs/taAug/people.fhd.explr.config --model_dir /home/ubuntu/codes/3d/models/rb.explr/people/tanet.ca.rb --resume True|
