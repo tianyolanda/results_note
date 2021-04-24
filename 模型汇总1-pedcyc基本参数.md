@@ -70,8 +70,6 @@
 
 发现explr训出的rb会有很稳定，可能因为epo多？可以多试试
 
-注:[4/20/2021 在训 COMP0.g1 是second.tanet.psa的psa,用taAug,lr=3,再训练一次]
-
 # car(单class)已训模型汇总
 
 |模型名字|  DAug  |w/o ME|AP_CAR |fps|训练命令|
@@ -90,7 +88,7 @@
 |taAug/ta.norb|  ta  |N(有且只有TA的coarse b)|87.70, 77.43, 75.08 |/ |/ |64|CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/tt.second/second.tarpn.norb/second/configs/taAug/car.lite.tarpn.norb.config --model_dir /home/ubuntu/codes/3d/tt.second/second.tarpn.norb/model/taAug/ta.norb  --resume True|
 |ta.psa.again4.taAug|  ta  |N(有TA的PSA+rb)|87.43, 77.93, 76.08 |/ |/ |45|    train(config_path='/home/ubuntu/codes/3d/tt.second/second.tanet.psa/second/configs/taAug/psa.car.lite.config',model_dir='/home/ubuntu/codes/3d/tt.second/second.tanet.psa/newmodels/ta.psa.again4.taAug',resume=True)|
 |model_car.lite.voxelRPN.again3.taAug|  ta  |N(有VoxelRPN的rpn)|88.01, 77.79, 76.29 |/ |/ |没测 命令有错|train(config_path='/home/ubuntu/codes/3d/second.pytorch/second/configs/taAug/car.lite.voxelRPN.config',model_dir='/home/ubuntu/codes/3d/second.pytorch/newmodels/new323/model_car.lite.voxelRPN.again3.taAug',resume=True)|
-|[ 4/21 在训 COMP0.g0 刚训完]models-taAug/people/fhd.tapsa|  ta  |N(有TA的ca+rb)|/ | 81.06, 63.22, 61.33(rb前的,很高.rb后下降) | 64.80, 58.21, 51.69 |27|CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/tt.second/second.tanet.psa/second/configs/taAug/people.fhd.config --model_dir /home/ubuntu/codes/3d/tt.second/second.tanet.psa/models-taAug/people/fhd.tapsa --resume True|
+|models-taAug/people/fhd.tapsa|  ta  |N(有TA的ca+rb)|/ | 81.06, 63.22, 61.33(rb前的,很高.rb后下降) | 64.80, 58.21, 51.69 |27|CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/tt.second/second.tanet.psa/second/configs/taAug/people.fhd.config --model_dir /home/ubuntu/codes/3d/tt.second/second.tanet.psa/models-taAug/people/fhd.tapsa --resume True|
 |taAug/people.ta.norb|  ta  |N(只有TA的coarse brench)|/ |81.54, 61.87, 59.26 |67.35, 60.89, 54.32 |31.25|CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/tt.second/second.tarpn.norb/second/configs/taAug/people.fhd.tarpn.norb.config --model_dir /home/ubuntu/codes/3d/tt.second/second.tarpn.norb/model/taAug/people.ta.norb  --resume True|
 |taAug/all.ta.norb|  ta  |N(只有TA的coarse brench)|87.84, 77.62, 75.87|80.97, 67.97, 62.13(最好)|66.18, 58.84, 52.91(同epo)|29|CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/tt.second/second.tarpn.norb/second/configs/taAug/all.fhd.tarpn.norb.config --model_dir /home/ubuntu/codes/3d/tt.second/second.tarpn.norb/model/taAug/all.ta.norb  --resume True|
 
