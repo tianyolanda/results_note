@@ -1,5 +1,17 @@
+#    anchor_area_threshold: 1 影响了nun_anchors 是否是动态
+anchor_area_threshold简称AAT
 
-anchorAssign有两种方式， 以及对应的matched_threshold，nms_pre_max_size，nms_score_threshold都不同
+|模型名字| AAT |RPN|w/o ME|AP_CYC |AP_PED|fps|训练命令|
+|--- |---|----|----|----|----|----|----|
+|[4/25 白天 COMP0.g0在训]people/taAug/aat1| 1 |RPNV2[128]|N|AP_CYC |AP_PED|fps|CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/people.fhd.taAug/people.fhd.aat1.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/people/taAug/aat1 --resume True|
+
+
+# anchorAssign有两种方式， 以及对应的matched_threshold，nms_pre_max_size，nms_score_threshold都不同
+|模型名字| pcl范围 | anchorA方式|mT|nms_size| nms_score |w/o ME|AP_CYC |AP_PED|fps|训练命令|
+|--- |---|----|----|----|----|----|----|----|----|----|
+|[4/23 晚 COMP1]fhd.48m.anchorAStride| 48| stride  |0.5,0.35|100,300|0.05,0.5| w/o ME|AP_CYC |AP_PED|fps|python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/taAug/people.fhd.48m.anchorAStride.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/me.people/fhd.48m.anchorAStride --resume=True|
+
+
 
 1. ta,pp
 ```buildoutcfg
@@ -42,6 +54,9 @@ anchorAssign有两种方式， 以及对应的matched_threshold，nms_pre_max_si
     
 
 
-|模型名字| pcl范围 | anchorA方式|mT|nms_size| nms_score |w/o ME|AP_CYC |AP_PED|fps|训练命令|
-|--- |---|----|----|----|----|----|----|----|----|----|
-|[4/23 晚 COMP1]fhd.48m.anchorAStride| 48| stride  |0.5,0.35|100,300|0.05,0.5| w/o ME|AP_CYC |AP_PED|fps|python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/taAug/people.fhd.48m.anchorAStride.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/me.people/fhd.48m.anchorAStride --resume=True|
+
+
+
+
+
+
