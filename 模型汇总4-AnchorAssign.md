@@ -3,7 +3,7 @@ anchor_area_threshold简称AAT
 
 |模型名字| AAT |RPN|w/o ME|AP_CYC |AP_PED|fps|训练命令|
 |--- |---|----|----|----|----|----|----|
-|[4/25 白天 COMP0.g0在训]people/taAug/aat1| 1 |RPNV2[128]|N|AP_CYC |AP_PED|fps|CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/people.fhd.taAug/people.fhd.aat1.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/people/taAug/aat1 --resume True|
+|people/taAug/aat1| 1 |RPNV2[128]|N|77.98, 60.14, 57.30 |65.31, 59.32, 53.13|33|CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/second.baseline2/second/configs/people.fhd.taAug/people.fhd.aat1.config --model_dir /home/ubuntu/codes/3d/second.baseline2/models/people/taAug/aat1 --resume True|
 
 
 # anchorAssign有两种方式， 以及对应的matched_threshold，nms_pre_max_size，nms_score_threshold都不同
