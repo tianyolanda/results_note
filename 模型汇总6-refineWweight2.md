@@ -2,5 +2,5 @@
 |--- |---|----|----|----|----|----|----|----|
 |all/taAug/me.rpn1b.ca.rb.dc.rw2| 2 |ca.rb.dc|81.29, 63.15, 61.23(refine后下降) |65.26, 58.73, 52.51(refine后下降)|88.96, 78.53, 77.01 |50.56, 37.89, 32.30|fps|# CUDA_VISIBLE_DEVICES=0 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/dc.second/dc2.second.psa/second/configs/all.taAug/all.fhd.taAug.me.config --model_dir /home/ubuntu/codes/3d/dc.second/dc2.second.psa/models/all/taAug/me.rpn1b.ca.rb.dc.rw2 --resume=True --refine_weight 2|
 |[4/25 白天 comp0.g1在训]people/taAug/me.rpn1b.ca.rb.dc.rw2| 2 |ca.rb.dc|AP_CYC |AP_PED|AP_CAR |AP_VAN| fps|CUDA_VISIBLE_DEVICES=1 python ./second/pytorch/train.py train --config_path /home/ubuntu/codes/3d/dc.second/dc2.second.psa/second/configs/taAug/people.fhd.taAug.me.config --model_dir /home/ubuntu/codes/3d/dc.second/dc2.second.psa/models/people/taAug/me.rpn1b.ca.rb.dc.rw2 --resume=True --refine_weight 2|
-
+|[4/25 白天 comp1在训]me.people/explr.me.ca.bc.rb.rpn1b.rw2| 2 |w/o ME|AP_CYC |AP_PED|AP_CAR |AP_VAN| fps|python ./second/pytorch/train.py train --config_path /home/ogailab/tiatia/codes/dc2.second.psa-master/second/configs/taAug/me.people.fhd.explr.config --model_dir /home/ogailab/tiatia/codes/dc2.second.psa-master/models/me.people/explr.me.ca.bc.rb.rpn1b.rw2 --refine_weight 2 --resume=True|
 
