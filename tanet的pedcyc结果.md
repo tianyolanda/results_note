@@ -102,3 +102,99 @@ bbox AP:69.93, 66.77, 63.37
 bev  AP:86.78, 82.10, 78.83
 3d   AP:86.78, 82.10, 78.80
 aos  AP:39.41, 39.97, 38.71
+
+# COMP1 训的 second.pytorch_TANET 未修改任何参数。refine_weight=2
+rb依然不稳定。
+
+Restoring parameters from /home/ogailab/tiatia/codes/TANet/second.pytorch_with_TANet/models/second.pytorch_with_TANet/open_source_train_ped_cyc_tanet_standard_really_psa_weight_2/voxelnet-296960.tckpt
+feature_map_size [1, 248, 296]
+remain number of infos: 3769
+Generate output labels...
+[100.0%][===================>][17.86it/s][03:24>00:00]   
+generate label finished(18.36/s). start eval:
+avg example to torch time: 2.109 ms
+avg prep time: 7.484 ms
+avg voxel_feature_extractor time = 14.304 ms
+avg middle forward time = 0.467 ms
+avg rpn forward time = 23.712 ms
+avg predict time = 6.196 ms
+overall_time: 54.27118137174401
+Frame per second (FPS) = 18 fps
+
+
+Evaluation official
+Cyclist AP(Average Precision)@0.50, 0.50, 0.50:
+bbox AP:85.86, 66.84, 63.83
+bev  AP:84.85, 63.99, 60.89
+3d   AP:83.74, 62.06, 58.06
+aos  AP:0.95, 4.29, 4.11
+Cyclist AP(Average Precision)@0.50, 0.25, 0.25:
+bbox AP:85.86, 66.84, 63.83
+bev  AP:84.90, 67.17, 63.12
+3d   AP:84.90, 66.73, 62.91
+aos  AP:0.95, 4.29, 4.11
+Pedestrian AP(Average Precision)@0.50, 0.50, 0.50:
+bbox AP:63.97, 60.52, 58.45
+bev  AP:73.28, 67.65, 62.19
+3d   AP:68.02, 61.78, 56.68
+aos  AP:26.39, 25.04, 23.45
+Pedestrian AP(Average Precision)@0.50, 0.25, 0.25:
+bbox AP:63.97, 60.52, 58.45
+bev  AP:81.45, 78.58, 75.40
+3d   AP:81.44, 78.52, 75.23
+aos  AP:26.39, 25.04, 23.45
+
+Evaluation coco
+Cyclist coco AP@0.25:0.05:0.70:
+bbox AP:82.68, 64.57, 61.55
+bev  AP:75.63, 58.08, 54.82
+3d   AP:71.09, 53.79, 50.80
+aos  AP:0.94, 4.03, 3.93
+Pedestrian coco AP@0.25:0.05:0.70:
+bbox AP:56.25, 53.92, 51.96
+bev  AP:64.54, 60.33, 56.67
+3d   AP:58.23, 54.18, 50.63
+aos  AP:23.69, 22.50, 21.38
+
+
+
+After Refine:
+Evaluation official
+Cyclist AP(Average Precision)@0.50, 0.50, 0.50:
+bbox AP:84.67, 64.42, 61.63
+bev  AP:82.74, 61.83, 58.38
+3d   AP:81.88, 60.42, 56.27
+aos  AP:0.56, 3.61, 3.59
+Cyclist AP(Average Precision)@0.50, 0.25, 0.25:
+bbox AP:84.67, 64.42, 61.63
+bev  AP:83.70, 63.75, 60.37
+3d   AP:83.70, 63.64, 60.32
+aos  AP:0.56, 3.61, 3.59
+Pedestrian AP(Average Precision)@0.50, 0.50, 0.50:
+bbox AP:65.26, 62.17, 59.30
+bev  AP:73.64, 67.86, 62.67
+3d   AP:67.11, 61.39, 55.80
+aos  AP:26.76, 25.25, 23.63
+Pedestrian AP(Average Precision)@0.50, 0.25, 0.25:
+bbox AP:65.26, 62.17, 59.30
+bev  AP:83.74, 79.80, 76.94
+3d   AP:83.82, 79.80, 76.92
+aos  AP:26.76, 25.25, 23.63
+
+Evaluation coco
+Cyclist coco AP@0.25:0.05:0.70:
+bbox AP:80.32, 62.12, 59.23
+bev  AP:73.25, 55.24, 52.36
+3d   AP:69.28, 51.86, 49.00
+aos  AP:0.56, 3.52, 3.44
+Pedestrian coco AP@0.25:0.05:0.70:
+bbox AP:58.04, 55.82, 54.01
+bev  AP:64.38, 60.40, 56.89
+3d   AP:58.45, 54.37, 51.01
+aos  AP:24.09, 22.66, 21.47
+
+# 接下来试试second.pytorch_TANET  refine_weight=5的
+
+# pp.TANET rw=2
+
+# pp.TANET rw=5
